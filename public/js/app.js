@@ -6,7 +6,8 @@ document.getElementById('button').addEventListener('click',(e)=>{
     let girdi =  document.getElementById("list").value;
     let key = 'USD'+girdi;
     
-    const url = 'http://localhost:4000/currency?currency='+girdi;
+    //const url = 'http://localhost:4000/currency?currency='+girdi; localhost da çalışırken
+    const url = '/currency?currency='+girdi; //herokuya yüklerken
 
     fetch(url)
     .then((response)=>{
@@ -23,7 +24,9 @@ document.getElementById('button').addEventListener('click',(e)=>{
 
 
 document.getElementById('buttonAll').addEventListener('click',(e)=>{
-    const url = 'http://localhost:4000/currency';
+    //const url = 'http://localhost:4000/currency'; localhost'da çalışırken
+    const url = '/currency'; //heroku'da çalışırken
+
     fetch(url)
     .then((response)=>{
         response.json().then((data)=>{
