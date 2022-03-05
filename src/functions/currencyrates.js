@@ -1,6 +1,6 @@
 const request = require('request');
 
-const apiKey="27829877b63c001b967332744329ea5e";
+const apiKey="x";
 
 
 //Source currrency available on just basic and higher plans
